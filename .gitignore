@@ -1,0 +1,37 @@
+
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Machine learning model files
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+
+# Environment variables and secrets
+.env
+.env.*
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS files
+.DS_Store
+Thumbs.db

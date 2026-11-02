@@ -1,0 +1,452 @@
+/* ==========================================================================
+   VISIONCAPTION AI - MASTER RESPONSIVE STYLESHEET
+   Supports Desktop Large, Desktop, Tablet, Mobile Large & Small (down to 320px)
+   ========================================================================== */
+
+/* ==========================================================================
+   1. TABLET & MEDIUM SCREENS (max-width: 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    /* Hero Section */
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        padding: 50px 24px;
+        text-align: center;
+    }
+
+    .hero-content {
+        align-items: center;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .hero-visual {
+        width: 100%;
+    }
+
+    .hero-visual .image-card {
+        max-width: 520px;
+    }
+
+    /* Features Grid */
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* Studio & Caption Page */
+    .caption-page, .history-page, .about-page {
+        padding: 40px 20px;
+    }
+
+    .caption-container, .history-container, .about-container {
+        max-width: 100%;
+    }
+
+    /* About Pipeline Grid */
+    .pipeline {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* ==========================================================================
+   2. TABLET PORTRAIT (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* General Spacing */
+    .caption-header h1, .history-header h1, .about-header h1 {
+        font-size: clamp(28px, 5vw, 36px);
+    }
+
+    .caption-header p, .history-header p, .about-header p {
+        font-size: 15px;
+    }
+
+    /* Hero Stats to 2x2 Grid */
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    /* Upload & Studio Controls */
+    .upload-card {
+        padding: 24px 18px;
+        border-radius: var(--radius-md);
+    }
+
+    .upload-area {
+        padding: 40px 16px;
+    }
+
+    .caption-options-panel {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .style-selector-group {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .style-chips {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .style-chip {
+        text-align: center;
+        justify-content: center;
+        padding: 9px 12px;
+        width: 100%;
+    }
+
+    .multi-caption-toggle {
+        width: 100%;
+        padding-top: 10px;
+        border-top: 1px solid var(--border);
+    }
+
+    .generate-btn {
+        width: 100%;
+        min-width: unset;
+        padding: 14px 20px;
+    }
+
+    /* Result Card & Variations */
+    .caption-result-card {
+        padding: 22px 18px;
+    }
+
+    .caption-actions {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .caption-action-btn {
+        width: 100%;
+        padding: 11px 10px;
+        font-size: 13px;
+    }
+
+    /* Semantic Grid */
+    .semantic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Evaluation & Benchmarks */
+    .score-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+        padding: 20px 16px;
+    }
+
+    .benchmark-input-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .benchmark-btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .benchmark-results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* History Page Layout */
+    .history-toolbar-panel {
+        padding: 16px;
+    }
+
+    .history-search-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .toolbar-right {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .history-card {
+        align-items: flex-start;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .history-image {
+        flex: 0 0 100px;
+        width: 100px;
+        height: 80px;
+    }
+
+    .history-caption {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* About Page Architecture & Pipeline */
+    .pipeline {
+        grid-template-columns: 1fr;
+    }
+
+    .model-comparison-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 20px;
+    }
+}
+
+/* ==========================================================================
+   3. MOBILE HANDSETS (max-width: 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+    /* Page Spacing */
+    .hero {
+        padding: 36px 16px;
+        gap: 36px;
+    }
+
+    .hero-content > p {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .primary-button, .secondary-button {
+        width: 100%;
+        text-align: center;
+        padding: 13px 20px;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .stat-value {
+        font-size: 18px;
+    }
+
+    .stat-label {
+        font-size: 10px;
+    }
+
+    /* Hero Visual Card on Mobile */
+    .image-card {
+        max-width: 100%;
+        border-radius: var(--radius-md);
+    }
+
+    .image-placeholder {
+        height: 180px;
+    }
+
+    .preview-art {
+        font-size: 42px;
+    }
+
+    .caption-preview {
+        padding: 16px;
+    }
+
+    .caption-preview p {
+        font-size: 14px;
+    }
+
+    /* Features Grid Single Column */
+    .features-section {
+        padding: 30px 16px 60px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .feature-card {
+        padding: 20px 18px;
+    }
+
+    /* Studio Upload on Mobile */
+    .caption-page {
+        padding: 30px 14px;
+    }
+
+    .upload-card {
+        padding: 18px 14px;
+    }
+
+    .upload-area {
+        padding: 30px 12px;
+    }
+
+    .upload-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 26px;
+        margin-bottom: 14px;
+    }
+
+    .upload-area h2 {
+        font-size: 20px;
+    }
+
+    .style-chips {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Result Card Mobile */
+    .caption-result-card {
+        padding: 18px 14px;
+        border-radius: var(--radius-md);
+    }
+
+    .caption-result {
+        padding: 14px;
+    }
+
+    .caption-result p {
+        font-size: 15px;
+    }
+
+    .caption-actions {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .caption-action-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .meta-pill {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    .semantic-intelligence-card, .evaluation-card {
+        padding: 18px 14px;
+        border-radius: var(--radius-md);
+    }
+
+    .score-radial {
+        min-width: 80px;
+        height: 80px;
+        padding-top: 22px;
+    }
+
+    .score-num {
+        font-size: 22px;
+    }
+
+    .benchmark-results-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .metric-card {
+        padding: 10px 8px;
+    }
+
+    .metric-val {
+        font-size: 17px;
+    }
+
+    /* History Card Stack on Small Mobile */
+    .history-page {
+        padding: 30px 14px;
+    }
+
+    .history-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .history-image {
+        width: 100%;
+        height: 150px;
+        flex: unset;
+    }
+
+    .history-content {
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .history-delete-btn {
+        top: 12px;
+        right: 12px;
+        background: #fee2e2;
+        color: #dc2626;
+    }
+
+    /* Toast Container on Mobile */
+    .toast-container {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .toast {
+        min-width: unset;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Footer Mobile */
+    .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-links {
+        justify-content: center;
+        gap: 16px;
+    }
+}
+
+/* ==========================================================================
+   4. ULTRA-COMPACT MOBILE (max-width: 360px)
+   ========================================================================== */
+@media (max-width: 360px) {
+    .style-chips {
+        grid-template-columns: 1fr;
+    }
+
+    .benchmark-results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

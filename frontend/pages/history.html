@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Caption History | VisionCaption AI</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+    <header class="navbar" id="mainNavbar">
+        <a href="../index.html" class="logo">
+            <span class="logo-icon">✦</span>
+            <span>VisionCaption AI</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="../index.html">Home</a>
+            <a href="caption.html">Caption Studio</a>
+            <a href="history.html" class="active">History</a>
+            <a href="about.html">How It Works</a>
+            <a href="caption.html" class="mobile-cta" style="display:none;">Launch Studio →</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="caption.html" class="nav-button">
+                Try Now →
+            </a>
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+        </div>
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main>
+
+        <section class="history-page">
+
+            <div class="history-container">
+
+
+                <!-- =================================
+                     PAGE HEADER
+                ================================== -->
+
+                <div class="history-header">
+
+                    <span class="section-badge">
+                        CAPTION HISTORY
+                    </span>
+
+                    <h1>
+                        Your Caption History
+                    </h1>
+
+                    <p>
+                        View the images you have previously
+                        processed and their generated captions.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================
+                     HISTORY TOOLBAR & FILTERS
+                ================================== -->
+                <div class="history-toolbar-panel">
+                    <div class="history-search-row">
+                        <div class="search-box">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" id="historySearchInput" placeholder="Search saved captions, styles, dates..." class="search-input">
+                        </div>
+
+                        <div class="toolbar-right">
+                            <div class="history-count">
+                                <span>Total Records:</span>
+                                <strong>0</strong>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="clear-history-btn"
+                                id="clearHistoryBtn"
+                            >
+                                🗑️ Clear All
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="history-filter-chips" id="filterChips">
+                        <button type="button" class="filter-chip active" data-filter="all">All Styles</button>
+                        <button type="button" class="filter-chip" data-filter="standard">✦ Standard</button>
+                        <button type="button" class="filter-chip" data-filter="short">⚡ Short</button>
+                        <button type="button" class="filter-chip" data-filter="detailed">🔍 Detailed</button>
+                        <button type="button" class="filter-chip" data-filter="creative">🎨 Creative</button>
+                    </div>
+                </div>
+
+
+
+                <!-- =================================
+                     HISTORY LIST
+                ================================== -->
+
+                <div
+                    class="history-list"
+                    id="historyList"
+                >
+
+
+                    <!-- HISTORY ITEM 1 -->
+
+                    <div class="history-card">
+
+                        <div class="history-image">
+
+                            <div class="history-image-placeholder">
+                                🏔️
+                            </div>
+
+                        </div>
+
+
+                        <div class="history-content">
+
+                            <span class="history-badge">
+                                AI GENERATED
+                            </span>
+
+                            <p class="history-caption">
+                                A beautiful mountain landscape
+                                surrounded by clouds and nature.
+                            </p>
+
+                            <span class="history-date">
+                                Today · 11:32 AM
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="history-delete-btn"
+                            aria-label="Delete caption"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- HISTORY ITEM 2 -->
+
+                    <div class="history-card">
+
+                        <div class="history-image">
+
+                            <div class="history-image-placeholder">
+                                🐕
+                            </div>
+
+                        </div>
+
+
+                        <div class="history-content">
+
+                            <span class="history-badge">
+                                AI GENERATED
+                            </span>
+
+                            <p class="history-caption">
+                                A friendly dog sitting on the
+                                grass outdoors.
+                            </p>
+
+                            <span class="history-date">
+                                Today · 10:45 AM
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="history-delete-btn"
+                            aria-label="Delete caption"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- HISTORY ITEM 3 -->
+
+                    <div class="history-card">
+
+                        <div class="history-image">
+
+                            <div class="history-image-placeholder">
+                                🌆
+                            </div>
+
+                        </div>
+
+
+                        <div class="history-content">
+
+                            <span class="history-badge">
+                                AI GENERATED
+                            </span>
+
+                            <p class="history-caption">
+                                A busy city street filled with
+                                people and buildings.
+                            </p>
+
+                            <span class="history-date">
+                                Yesterday · 04:20 PM
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="history-delete-btn"
+                            aria-label="Delete caption"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     EMPTY HISTORY
+                ================================== -->
+
+                <div
+                    class="history-empty"
+                    id="historyEmpty"
+                    hidden
+                >
+
+                    <div class="empty-icon">
+                        🖼️
+                    </div>
+
+                    <h2>
+                        No Caption History
+                    </h2>
+
+                    <p>
+                        Your generated captions will appear
+                        here after you process an image.
+                    </p>
+
+                    <a
+                        href="caption.html"
+                        class="history-generate-btn"
+                    >
+                        Generate Your First Caption
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+    <script src="../js/app.js"></script>
+    <script src="../js/history.js"></script>
+
+</body>
+
+</html>

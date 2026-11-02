@@ -1,0 +1,165 @@
+/* =========================================
+   UPLOAD SECTION
+========================================= */
+
+.caption-page {
+    min-height: calc(100vh - 80px);
+    padding: 70px 20px;
+}
+
+.caption-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.caption-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-badge {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 20px;
+    background: #e8f1ff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 15px;
+}
+
+.caption-header h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.caption-header p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #64748b;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   UPLOAD CARD
+========================================= */
+
+.upload-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e5eaf1;
+}
+
+
+/* =========================================
+   UPLOAD AREA
+========================================= */
+
+.upload-area {
+    border: 2px dashed #cbd5e1;
+    border-radius: 16px;
+    padding: 55px 30px;
+    text-align: center;
+    background: #f8fafc;
+    transition: 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: #2563eb;
+    background: #f1f6ff;
+}
+
+.upload-area.drag-over {
+    border-color: #2563eb;
+    background: #eaf2ff;
+}
+
+
+/* =========================================
+   UPLOAD ICON
+========================================= */
+
+.upload-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #e8f1ff;
+
+    font-size: 32px;
+}
+
+
+/* =========================================
+   UPLOAD TEXT
+========================================= */
+
+.upload-area h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.upload-area p {
+    color: #64748b;
+}
+
+.upload-or {
+    display: block;
+    margin: 12px 0;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   BROWSE BUTTON
+========================================= */
+
+.browse-btn {
+    display: inline-block;
+    padding: 11px 22px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.browse-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   UPLOAD INFORMATION
+========================================= */
+
+.upload-info {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #94a3b8 !important;
+}

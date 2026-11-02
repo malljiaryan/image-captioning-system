@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Generate Caption | VisionCaption AI</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+    <header class="navbar" id="mainNavbar">
+        <a href="../index.html" class="logo">
+            <span class="logo-icon">✦</span>
+            <span>VisionCaption AI</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="../index.html">Home</a>
+            <a href="caption.html" class="active">Caption Studio</a>
+            <a href="history.html">History</a>
+            <a href="about.html">How It Works</a>
+            <a href="caption.html" class="mobile-cta" style="display:none;">Launch Studio →</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="caption.html" class="nav-button">
+                Try Now →
+            </a>
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+        </div>
+    </header>
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main>
+
+        <section class="caption-page">
+
+            <div class="caption-container">
+
+
+                <!-- =================================
+                     PAGE HEADER
+                ================================== -->
+
+                <div class="caption-header">
+
+                    <span class="section-badge">
+                        AI IMAGE CAPTIONING
+                    </span>
+
+                    <h1>
+                        Generate a Caption
+                    </h1>
+
+                    <p>
+                        Upload an image and let our Deep Learning
+                        model generate a meaningful caption.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================
+                     UPLOAD CARD
+                ================================== -->
+
+                <div class="upload-card">
+
+                    <div
+                        class="upload-area"
+                        id="uploadArea"
+                    >
+
+                        <div class="upload-icon">
+                            📷
+                        </div>
+
+                        <h2>
+                            Upload Your Image
+                        </h2>
+
+                        <p>
+                            Drag &amp; drop your image here
+                        </p>
+
+                        <span class="upload-or">
+                            or
+                        </span>
+
+                        <label
+                            for="imageInput"
+                            class="browse-btn"
+                        >
+                            Browse Image
+                        </label>
+
+                        <input
+                            type="file"
+                            id="imageInput"
+                            accept="image/png, image/jpeg, image/jpg, image/webp"
+                            hidden
+                        >
+
+                        <p class="upload-info">
+                            Supported formats: JPG, JPEG, PNG, WEBP
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================
+                         IMAGE PREVIEW
+                    ================================== -->
+
+                    <div
+                        class="image-preview-container"
+                        id="imagePreviewContainer"
+                        hidden
+                    >
+
+                        <div class="preview-header">
+
+                            <h3>
+                                Image Preview
+                            </h3>
+
+                            <button
+                                type="button"
+                                id="removeImageBtn"
+                                class="remove-image-btn"
+                            >
+                                Remove
+                            </button>
+
+                        </div>
+
+                        <div class="image-preview">
+
+                            <img
+                                id="imagePreview"
+                                src=""
+                                alt="Selected image preview"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================
+                         STYLE & OPTIONS BAR
+                    ================================== -->
+                    <div class="caption-options-panel">
+                        <div class="style-selector-group">
+                            <span class="options-label">Caption Style:</span>
+                            <div class="style-chips">
+                                <button type="button" class="style-chip active" data-style="standard">
+                                    ✦ Standard
+                                </button>
+                                <button type="button" class="style-chip" data-style="short">
+                                    ⚡ Short
+                                </button>
+                                <button type="button" class="style-chip" data-style="detailed">
+                                    🔍 Detailed
+                                </button>
+                                <button type="button" class="style-chip" data-style="creative">
+                                    🎨 Creative
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="multi-caption-toggle">
+                            <label class="toggle-container" for="multiCaptionToggle">
+                                <input type="checkbox" id="multiCaptionToggle">
+                                <span class="toggle-text">Generate 3 Variations</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- =================================
+                         GENERATE BUTTON
+                    ================================== -->
+
+                    <div class="generate-container">
+
+                        <button
+                            type="button"
+                            id="generateCaptionBtn"
+                            class="generate-btn"
+                            disabled
+                        >
+                            Generate Caption
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     LOADING STATE
+                ================================== -->
+
+                <div
+                    class="caption-loading"
+                    id="captionLoading"
+                    hidden
+                >
+
+                    <div class="loading-spinner"></div>
+
+                    <p>
+                        AI is analyzing your image...
+                    </p>
+
+                </div>
+
+
+                <!-- =================================
+                     CAPTION RESULT
+                ================================== -->
+
+                <div
+                    class="caption-result-card"
+                    id="captionResultCard"
+                    hidden
+                >
+
+                    <div class="result-header">
+
+                        <div class="result-header-top">
+                            <span class="result-badge">
+                                AI GENERATED
+                            </span>
+                            <span class="model-tag" id="metaModelTag">
+                                Salesforce BLIP
+                            </span>
+                        </div>
+
+                        <h2>
+                            Your Caption
+                        </h2>
+
+                    </div>
+
+                    <div class="caption-result">
+
+                        <p id="captionResult"></p>
+
+                    </div>
+
+                    <!-- Comparison & Multiple Variations Container -->
+                    <div class="comparison-container" id="comparisonContainer" hidden>
+                        <div class="comparison-header">
+                            <h3>Caption Variations</h3>
+                            <span class="comparison-hint">Click any variation to select it</span>
+                        </div>
+                        <div class="variations-grid" id="variationsGrid">
+                            <!-- Injected dynamically via JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Caption Metadata Display -->
+                    <div class="caption-metadata" id="captionMetadata">
+                        <div class="meta-pill" title="Inference Time">
+                            <span class="meta-icon">⚡</span>
+                            <span id="metaInference">0.0s</span>
+                        </div>
+                        <div class="meta-pill" title="Model Confidence">
+                            <span class="meta-icon">🎯</span>
+                            <span id="metaConfidence">92% High</span>
+                        </div>
+                        <div class="meta-pill" title="Image Dimensions">
+                            <span class="meta-icon">📐</span>
+                            <span id="metaDimensions">--</span>
+                        </div>
+                        <div class="meta-pill" title="Word Count">
+                            <span class="meta-icon">📝</span>
+                            <span id="metaWordCount">--</span>
+                        </div>
+                    </div>
+
+                    <!-- Caption Actions (Copy, Regenerate & Export) -->
+                    <div class="caption-actions">
+                        <button
+                            type="button"
+                            id="copyCaptionBtn"
+                            class="caption-action-btn copy-btn"
+                        >
+                            📋 Copy Caption
+                        </button>
+
+                        <button
+                            type="button"
+                            id="regenerateCaptionBtn"
+                            class="caption-action-btn regenerate-btn"
+                        >
+                            🔄 Regenerate
+                        </button>
+
+                        <button
+                            type="button"
+                            id="exportTxtBtn"
+                            class="caption-action-btn export-btn"
+                        >
+                            📄 Export TXT
+                        </button>
+
+                        <button
+                            type="button"
+                            id="exportJsonBtn"
+                            class="caption-action-btn export-btn"
+                        >
+                            📊 Export JSON
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- =================================
+                     AI SEMANTIC SCENE UNDERSTANDING
+                ================================== -->
+                <div class="semantic-intelligence-card" id="semanticCard" hidden>
+                    <div class="semantic-header">
+                        <span class="section-badge">SEMANTIC INTELLIGENCE</span>
+                        <h3>Scene Understanding & Entity Recognition</h3>
+                    </div>
+
+                    <div class="semantic-grid">
+                        <div class="semantic-item">
+                            <div class="semantic-item-title">🏷️ Detected Objects</div>
+                            <div class="tags-container" id="detectedObjectsTags"></div>
+                        </div>
+                        <div class="semantic-item">
+                            <div class="semantic-item-title">🏞️ Scene & Setting</div>
+                            <div class="semantic-text-val" id="detectedSceneVal">--</div>
+                        </div>
+                        <div class="semantic-item">
+                            <div class="semantic-item-title">🏃 Activity / Dynamics</div>
+                            <div class="semantic-text-val" id="detectedActivityVal">--</div>
+                        </div>
+                        <div class="semantic-item">
+                            <div class="semantic-item-title">🎨 Visual Attributes</div>
+                            <div class="tags-container" id="detectedAttributesTags"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- =================================
+                     AI QUALITY BENCHMARK & EVALUATION
+                ================================== -->
+                <div class="evaluation-card" id="evaluationCard" hidden>
+                    <div class="eval-header">
+                        <span class="section-badge">AI BENCHMARK & METRICS</span>
+                        <h3>Caption Quality & Quantitative Evaluation</h3>
+                    </div>
+
+                    <!-- Overall Score Banner -->
+                    <div class="score-banner">
+                        <div class="score-radial">
+                            <span class="score-num" id="evalScoreNum">--</span>
+                            <span class="score-max">/100</span>
+                        </div>
+                        <div class="score-info">
+                            <div class="score-grade" id="evalScoreGrade">High Quality</div>
+                            <p class="score-desc" id="evalScoreDesc">Calculated from syntactic fluency, vocabulary diversity, and semantic alignment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Reference Caption Benchmark Drawer -->
+                    <div class="reference-benchmark-box">
+                        <h4>Compare with Reference Caption (Ground Truth)</h4>
+                        <p class="benchmark-sub">Enter a reference caption to benchmark exact BLEU, ROUGE, METEOR, and Semantic Similarity scores.</p>
+                        <div class="benchmark-input-row">
+                            <input type="text" id="referenceCaptionInput" placeholder="e.g. A blue background with a white frame and border..." class="benchmark-input">
+                            <button type="button" id="runBenchmarkBtn" class="benchmark-btn">Benchmark Now</button>
+                        </div>
+
+                        <div class="benchmark-results-grid" id="benchmarkResultsGrid" hidden>
+                            <div class="metric-card">
+                                <span class="metric-label">BLEU-4</span>
+                                <span class="metric-val" id="metricBleu">--</span>
+                                <span class="metric-note">n-gram precision</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-label">ROUGE-L</span>
+                                <span class="metric-val" id="metricRouge">--</span>
+                                <span class="metric-note">LCS recall F1</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-label">METEOR</span>
+                                <span class="metric-val" id="metricMeteor">--</span>
+                                <span class="metric-note">harmonic alignment</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-label">Similarity</span>
+                                <span class="metric-val" id="metricSimilarity">--</span>
+                                <span class="metric-note">semantic token overlap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- =================================
+                     ERROR MESSAGE
+                ================================== -->
+
+                <div
+                    class="caption-error"
+                    id="captionError"
+                    hidden
+                >
+
+                    <p id="captionErrorMessage">
+                        Something went wrong. Please try again.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <!-- Shared App Utilities -->
+    <script src="../js/app.js"></script>
+
+    <!-- Image upload and preview -->
+    <script src="../js/upload.js"></script>
+
+    <!-- Caption generation UI -->
+    <script src="../js/caption.js"></script>
+
+</body>
+
+</html>
